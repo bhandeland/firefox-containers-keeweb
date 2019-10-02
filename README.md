@@ -14,15 +14,19 @@ Integrating Keeweb with Firefox and Multi-account containers.  This set of instr
      
 ## Installation ##
 1.) Copy '''firefox-container.desktop''' to ~/.local/share/applications or to /usr/share/applications
+    
     $ cp firefox-container.desktop ~/.local/share/applications
     
 2.) Register the MIME handler 
+    
     $ xdg-mime default firefox-container.desktop x-scheme-handler/firefox
     
 3.) Copy firefox-c to somewhere in your path.  I use my home directory/bin:
+    
     $ cp firefox-c ~/bin
     $ chmod +x ~/bin/firefox-c
 4.) Setup the '''Website''' address in keeweb to use the firefox handler:
+    
     firefox://https://www.google.com
     
 Thats it.  Whenever you click the firefox:// link in keepass (or anywhere on your desktop for that matter), it will automatically launch in a new container tab (create it if necessary).
