@@ -1,0 +1,23 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use URI;
+
+my $url = $ARGV[0] || die "url is a required parameter\n";
+
+# remove the firefox:// handler
+$url =~ s/firefox:\/\///g;
+
+# get the hostname from the URL
+my $uri = URI->new($url);
+my $host = $uri->host;
+
+# update the new URL for the container tab to work
+my $new_url = "ext+container:name=$host&url=$url";
+
+# quote the URL on the command line
+my $quoted_url = "\"ext+container:name=$host&url=$url\"";
+
+# execute firefox
+`firefox $quoted_url`
+

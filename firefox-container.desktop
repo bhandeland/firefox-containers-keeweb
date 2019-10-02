@@ -1,0 +1,23 @@
+[Desktop Entry]
+Version=1.0
+Name=Firefox Web Browser Containered
+Comment=Browse the World Wide Web Containered
+GenericName=Web Browser Containered
+Keywords=Internet;WWW;Browser;Web;Explorer;Containered
+Exec=firefox-c %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=x-scheme-handler/firefox
+StartupNotify=true
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=Open a New Window
+Exec=firefox-c %u
+
+[Desktop Action new-private-window]
+Name=Open a New Private Window
+Exec=firefox-c %u
